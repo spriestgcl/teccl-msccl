@@ -2,7 +2,7 @@
 
 # Run teccl solve for all configurations in the experiments directory
 
-for topology in NDv2 DGX2;
+for topology in NDv2 DGX2 A800_4GPU;
 do
     for chassis in experiments/"$topology"*/;
     do
