@@ -18,6 +18,7 @@ from teccl.topologies.ndv2 import NDv2
 from teccl.topologies.amd import AMD
 from teccl.topologies.a800_4gpu import A800_4GPU
 from teccl.topologies.mesh import Mesh
+from teccl.topologies.nvswitch16 import NVSwitch16
 from teccl.topologies.topology import Topology
 
 
@@ -39,6 +40,8 @@ class TECCLSolver(object):
             return AMD(topology_params)
         elif topology_params.name == "A800_4GPU":
             return A800_4GPU(topology_params)
+        elif topology_params.name == "NVSwitch16":
+            return NVSwitch16(topology_params)
         elif topology_params.name == "Mesh":
             return Mesh(topology_params)
         else:
